@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คำนวณค่าธรรมเนียมโอนเงิน</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <p>ปั้มน้ำมันเครื่องบิน</p>
+    <div class="container">
+        <h1>เมนูหลัก</h1>
+        <button onclick="showPage('calculate')">📊 คำนวณค่าธรรมเนียม</button>
+        <button onclick="showPage('rate')">📌 ดูเรทราคา</button>
+        
+        <div id="calculatePage" class="card hidden">
+            <h3>📊 คำนวณค่าธรรมเนียม</h3>
+            <input type="number" id="amount" placeholder="กรอกจำนวนเงิน">
+            <button onclick="calculateFee()">คำนวณ</button>
+            <p id="result">ค่าธรรมเนียม: -</p>
+        </div>
+
+        <div id="ratePage" class="card hidden">
+            <h3>📌 เรทราคาค่าธรรมเนียม</h3>
+            <ul>
+                <li>0 - 100 บาท: 10 บาท</li>
+                <li>500 - 1,000 บาท: 20 บาท</li>
+                <li>2,000 - 3,000 บาท: 30 บาท</li>
+                <li>4,000         บาท: 40 บาท</li>
+                <li>5,000         บาท: 45 บาท</li>
+                <li>10,000        บาท: 70 บาท</li>
+            </ul>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
